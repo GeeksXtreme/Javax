@@ -1,0 +1,39 @@
+Created by Jedediah Rodriguez #@MrXors
+--------------------------------------
+
+  _  _     _    
+   //_/| |/_/\ /
+(_// / |// / /'\ JAVAX 
+
+
+--------------------------------------
+	Javax is an Exploit tool that uses Metasploit, Apache2, Javascript, PHP and python to serv Java exploits. 
+		-First: Running javax.py for the first time will create a directory called tmpdir/
+			-exploit_file cretaed in tmpdir/ 
+
+		-Second: javax.py will check to see if Apache2 is running and Msfrpcd. If its not running it starts it.
+			-javax will then copy PluginDetect.js, index.php and post.php to /var/www. At that point chmod 755 is done on /var/www
+
+		-Third: javax.py will then load a menu waiting for your command.
+			-selecting an option
+
+				-1.Sessions: 
+					-display sessions.
+
+				-2.Start Java Exploits:
+					-Starts All Java Exploits.
+
+				-3.Kill all jobs: 
+					-Kills All The Jobs.
+
+				-4.Shutdown: 
+					-Exit javax.py but doesnt kill Msfrpcd and Apache2
+
+		-Fourth: javax.py will then update Post.php to display the correct IP/Sploit.Location
+			-As an attacker all you need to do is get Victim to visit website and if java version is vuln it will redirect victim to correct exploit for sed version and exploit with 
+				a java payload.If version is not configured and vuln is in metasploit please email Jedi.Rodriguez<at>gmail.com with the details:(version, exploit name, platform)
+
+		-Fifth: javax.py has minor session interaction, upgrading that. 
+
+		-MISC / Creates a captured_text.file in /tmp/captured_forms.txt 
+
